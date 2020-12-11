@@ -1,5 +1,6 @@
 Vivaldi
 =========
+![CI](https://github.com/tstechly/ansible-role-vivaldi/workflows/CI/badge.svg)
 
 Installs Vivaldi browser
 

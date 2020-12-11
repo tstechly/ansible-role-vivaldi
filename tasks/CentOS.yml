@@ -1,0 +1,11 @@
+---
+- name: add vivaldi repo
+  yum_repository:
+    name: vivaldi
+    description: vivaldi repo
+    baseurl: "https://repo.vivaldi.com/archive/rpm/x86_64"
+
+- name: install vivaldi
+  yum:
+    name: vivaldi-stable
+    disable_gpg_check: true

@@ -1,7 +1,15 @@
 ---
 - name: Converge
   hosts: all
-  tasks:
-    - name: "Include vivaldi"
-      include_role:
-        name: "vivaldi"
+  roles:
+    - role: "{{ lookup('env', 'MOLECULE_PROJECT_DIRECTORY') | basename }}"
+  pre_tasks:
+    - name: Update apt cache.
+      apt: update_cache=true cache_valid_time=600
+      when: ansible_os_family == 'Debian'
+      changed_when: false
+    - name: install gpg agent
+      apt: 
+        name: gpg-agent
+      when: ansible_os_family == 'Debian'
+      changed_when: false

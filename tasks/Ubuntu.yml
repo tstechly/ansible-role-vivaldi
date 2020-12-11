@@ -1,0 +1,16 @@
+---
+- name: Import the APT repo key (Debian)
+  apt_key:
+    url: "https://repo.vivaldi.com/archive/linux_signing_key.pub"
+
+- name: Create the APT repository (Debian)
+  apt_repository:
+    repo: deb https://repo.vivaldi.com/archive/deb/ stable main
+    filename: "vivaldi-stable"
+
+
+
+- name: install vivaldi
+  apt:
+    name: vivaldi-stable
+    update_cache: true

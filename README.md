@@ -3,6 +3,8 @@ Vivaldi
 
 Installs Vivaldi browser
 
+Based on: https://help.vivaldi.com/desktop/install-update/manual-setup-vivaldi-linux-repositories/
+
 Requirements
 ------------
 

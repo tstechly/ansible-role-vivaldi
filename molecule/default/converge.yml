@@ -9,7 +9,7 @@
       when: ansible_os_family == 'Debian'
       changed_when: false
     - name: install gpg agent
-      apt: 
+      apt:
         name: gpg-agent
       when: ansible_os_family == 'Debian'
       changed_when: false
